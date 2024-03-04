@@ -33,7 +33,7 @@ def build_spacy_model(train,model):
     with nlp.disable_pipes(*other_pipes):  # only train NER
         if model is None:
             optimizer = nlp.begin_training()
-        for itn in range(2):
+        for itn in range(50):
             print("Starting iteration " + str(itn))
             # random.shuffle(TRAIN_DATA)
             # losses = {}
